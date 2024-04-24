@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.util.Collections;
 import java.util.List;
 @Service
 public class FakeStoreProductService implements ProductService{
@@ -37,24 +38,38 @@ public class FakeStoreProductService implements ProductService{
     @Override
     public Product getProductById(long id) {
 //        RestTemplate restTemplate=new RestTemplate();
-        FakeServiceDto product =this.restTemplate.getForObject("https://fakestoreapi.com/products/"+id,FakeServiceDto.class);
-        return ConvertFakeServiceDtoToProduct(product);
+        try {
+            FakeServiceDto product =this.restTemplate.getForObject("https://fakestoreapi.com/products/"+id,FakeServiceDto.class);
+            return ConvertFakeServiceDtoToProduct(product);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     @Override
     public List<Product> getAllProducts() {
 
         //WebClient webClient = WebClient.create(); // get WeClient instance
+    try {
+    Object obj = webClient.get() // represents HTTP GET request
+            .uri("https://fakestoreapi.com/products")
+            .accept(MediaType.APPLICATION_JSON)
+            .retrieve()
+            .bodyToMono(Object.class)
+            .block();
 
-        Object obj = webClient.get() // represents HTTP GET request
-                .uri("https://fakestoreapi.com/products")
-                .accept(MediaType.APPLICATION_JSON)
-                .retrieve()
-                .bodyToMono(Object.class)
-                .block();
+    List<Product> p= (List<Product>) obj;
 
-        List<Product> p= (List<Product>) obj;
+    return p;
+    }
 
-        return p;
+    catch (Exception e){
+     e.printStackTrace();
+     return Collections.emptyList();
+    }
+
     }
 }
