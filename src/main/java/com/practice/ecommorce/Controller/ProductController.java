@@ -2,7 +2,9 @@ package com.practice.ecommorce.Controller;
 
 import java.util.List;
 
+import com.practice.ecommorce.exceptions.ProductNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,15 +37,16 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Product getProductById(@PathVariable("id") long id) {
+    public Product getProductById(@PathVariable("id") long id) throws ProductNotFoundException {
 
         return productService.getProductById(id);
     }
 
     @GetMapping
-    public List<Product> getProducts() {
-
-        return productService.getAllProducts();
+    public ResponseEntity<Page<Product>> getProducts(@RequestParam(value = "page", defaultValue = "0") int page,
+            @RequestParam(value = "size", defaultValue = "2") int size) {
+        Page<Product> products = productService.getAllProducts(page, size);
+        return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
     @PostMapping

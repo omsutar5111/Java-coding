@@ -17,7 +17,7 @@ public class Product {
     private String title;
     private double price;
     private String description;
-    @ManyToOne(fetch =FetchType.EAGER)
+    @ManyToOne(fetch =FetchType.EAGER,cascade = CascadeType.PERSIST)
 //    @JsonIgnore
     private Category category;
 //    @ManyToMany
