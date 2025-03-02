@@ -1,4 +1,4 @@
-package Advance_Java.Threads.synchronize;
+package Advance_Java.concurrancyAndMultithreading.synchronize;
 
 public class Count {
     int num;

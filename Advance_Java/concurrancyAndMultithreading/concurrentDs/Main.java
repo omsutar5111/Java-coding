@@ -1,4 +1,4 @@
-package Advance_Java.Threads.concurrentDs;
+package Advance_Java.concurrancyAndMultithreading.concurrentDs;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

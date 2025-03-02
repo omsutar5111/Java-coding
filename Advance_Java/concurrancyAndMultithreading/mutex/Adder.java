@@ -1,4 +1,4 @@
-package Advance_Java.Threads.mutex;
+package Advance_Java.concurrancyAndMultithreading.mutex;
 
 import java.util.concurrent.locks.Lock;
 

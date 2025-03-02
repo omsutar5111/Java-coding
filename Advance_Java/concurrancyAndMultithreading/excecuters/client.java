@@ -1,4 +1,4 @@
-package Advance_Java.Threads.excecuters;
+package Advance_Java.concurrancyAndMultithreading.excecuters;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

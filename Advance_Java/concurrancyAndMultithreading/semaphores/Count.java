@@ -1,4 +1,4 @@
-package Advance_Java.Threads.semaphores;
+package Advance_Java.concurrancyAndMultithreading.semaphores;
 
 public class Count {
     int num;

@@ -1,4 +1,4 @@
-package Advance_Java.Threads.mutex;
+package Advance_Java.concurrancyAndMultithreading.semaphores;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -6,6 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
+//        Object lock=new Object();
         Lock lock = new ReentrantLock();
         Count count = new Count(0);
         Adder adder = new Adder(count, lock);

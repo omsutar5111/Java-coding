@@ -1,4 +1,4 @@
-package Advance_Java.Threads;
+package Advance_Java.concurrancyAndMultithreading;
 
 public class main {
     public static void main(String[] args)throws  Exception {

@@ -1,4 +1,4 @@
-package Advance_Java.Threads.mutex;
+package Advance_Java.concurrancyAndMultithreading.mutex;
 
 public class Count {
     int num;

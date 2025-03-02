@@ -1,4 +1,4 @@
-package Advance_Java.Threads.mutex;
+package Advance_Java.concurrancyAndMultithreading.mutex;
 
 import java.util.concurrent.locks.Lock;
 
@@ -15,9 +15,11 @@ public class Subtractor implements Runnable{
     @Override
     public void run() {
         for (int i=0; i<100000; i++){
+
             lock.lock();
             count.num--;
             lock.unlock();
+
         }
     }
 }

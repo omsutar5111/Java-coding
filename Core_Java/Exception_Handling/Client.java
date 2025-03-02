@@ -15,5 +15,7 @@ public class Client {
         catch (InvalidAgeException invalidAgeException){
             System.out.println(invalidAgeException.getMessage());
         }
+
+
     }
 }
