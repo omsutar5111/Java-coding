@@ -142,7 +142,37 @@ public class Medium {
         return ans;
 
     }
+ //problem 2162 partition array according to given pivot
 
+    public static  int []pivotArray(int nums[],int pivot){
+       int n=nums.length;
+       int ans[]=new int[n];
+       int left=0,right=n-1,equal=0;
+       for(int num:nums){
+           if(num<pivot){
+               left++;
+           } else if (num==pivot) {
+               equal++;
+           }
+       }
+       int startIndex=0;
+       int mid=left;
+       int largerThanPivot=left+equal;
+       for(int num:nums){
+           if(num<pivot){
+               ans[startIndex]=num;
+               startIndex++;
+           } else if (num==pivot) {
+               ans[mid]=num;
+               mid++;
+           }
+           else{
+               ans[largerThanPivot]=num;
+               largerThanPivot++;
+           }
+       }
+       return ans;
+    }
     public static boolean canEat(int capacity,int []piles,int h){
 //        int totalTime=0;
 //        for(int pile:piles){
@@ -223,6 +253,19 @@ public class Medium {
           result.append(row);
       }
      return result.toString();
+    }
+
+    // 1780. Check if Number is a Sum of Powers of Three
+
+    public boolean cheecPowerofThree(int num){
+       // tsak is to find if its possible to sum of  unique power to three is equal to number
+        while(num>0){
+            if(num%3==2){
+                return false;
+            }
+            num/=3;
+        }
+        return true;
     }
 
     public static List<List<String>>collectAnagrams(String[]str){
