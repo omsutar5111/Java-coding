@@ -282,6 +282,36 @@ public class Medium {
         }
         return  new ArrayList<>(map.values());
     }
+  //2523. Closest Prime Numbers in Range
+    public  static int[]getClosestPrimes(int left,int right){
+       ArrayList<Integer>ans=new ArrayList<>();
+       boolean getPrimes[]=new boolean[right+1];
+       Arrays.fill(getPrimes,true);
+       for(int i=2;i*i<=right;i++){
+           if(getPrimes[i]){
+               for(int j=i*i;j<=right;j+=i){
+                   getPrimes[j]=false;
+               }
+           }
+       }
+       for(int i=Math.max(2,left);i<=right;i++){
+           if(getPrimes[i]){
+               ans.add(i);
+           }
+       }
+        if (ans.size() < 2) {
+            return new int[]{-1, -1};
+        }
+        int min= ans.get(0),max=ans.get(1),minDifference=max-min;
+        for(int i=1;i<ans.size()-1;i++){
+            int diff=ans.get(i+1)- ans.get(i);
+            if(diff<minDifference){
+                min=ans.get(i);
+                max=ans.get(i+1);
+            }
+        }
+        return  new  int[]{min,max};
+    }
 
     public static void main(String[] args) {
        int []Arr={4,5,6,7,0,1,2};
@@ -297,6 +327,9 @@ public class Medium {
 //        System.out.println(searchBinary(Arr,0));
 //        System.out.println(canMakeSubsequence("f","f"));
 //        System.out.println(addSpaces( "EnjoyYourCoffee",spaces));
-
+       int getClosestPrime[]=getClosestPrimes(18 ,25);
+       for (int num:getClosestPrime){
+           System.out.println(num);
+       }
     }
 }
