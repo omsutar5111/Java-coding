@@ -1,6 +1,7 @@
-package Java_Design_Patterns.Factory.Andriod;
+package Java_Design_Patterns.Factory.Factories;
 
-import Java_Design_Patterns.Factory.UiFactory;
+import Java_Design_Patterns.Factory.Andriod.AndriodButton;
+import Java_Design_Patterns.Factory.Andriod.AndriodMenu;
 
 public class AndriodFactory implements UiFactory {
     @Override

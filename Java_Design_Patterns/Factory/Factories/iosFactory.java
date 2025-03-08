@@ -1,6 +1,7 @@
-package Java_Design_Patterns.Factory.Ios;
+package Java_Design_Patterns.Factory.Factories;
 
-import Java_Design_Patterns.Factory.UiFactory;
+import Java_Design_Patterns.Factory.Ios.IosButton;
+import Java_Design_Patterns.Factory.Ios.IosMenu;
 
 public  class iosFactory implements UiFactory {
     @Override

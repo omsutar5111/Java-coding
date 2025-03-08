@@ -10,7 +10,7 @@ public class Singleton {
 
 
 
-    //use for eager initilization
+    //use for eager initilization comment out first line as well
     public static Singleton getEagerInstance(){
         return  Instance;
     }

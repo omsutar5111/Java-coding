@@ -1,6 +1,6 @@
 package Java_Design_Patterns.Factory.Ios;
 
-import Java_Design_Patterns.Factory.Menu.Menu;
+import Java_Design_Patterns.Factory.Features.Menu;
 
 public class IosMenu implements Menu {
     @Override

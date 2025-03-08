@@ -1,7 +1,8 @@
 package Java_Design_Patterns.Factory;
 
-import Java_Design_Patterns.Factory.Andriod.AndriodFactory;
-import Java_Design_Patterns.Factory.Ios.iosFactory;
+import Java_Design_Patterns.Factory.Factories.AndriodFactory;
+import Java_Design_Patterns.Factory.Factories.UiFactory;
+import Java_Design_Patterns.Factory.Factories.iosFactory;
 
 public class Flutter {
 

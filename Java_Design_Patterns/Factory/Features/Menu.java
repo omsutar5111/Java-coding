@@ -1,4 +1,4 @@
-package Java_Design_Patterns.Factory.Menu;
+package Java_Design_Patterns.Factory.Features;
 
 public interface Menu {
     void createMenu();

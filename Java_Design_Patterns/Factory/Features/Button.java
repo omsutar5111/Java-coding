@@ -1,4 +1,4 @@
-package Java_Design_Patterns.Factory.Button;
+package Java_Design_Patterns.Factory.Features;
 
 public interface Button {
    void createButton();
