@@ -19,7 +19,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void getProductById() {
+    public void getProductById() throws Exception {
         long productId = 1;
 
         // Create a mock product to return
