@@ -1,0 +1,22 @@
+2025-03-21 10:46:18 INFO  EcommorceApplication:50 - Starting EcommorceApplication using Java 21.0.2 with PID 260 (C:\Users\omkarsutar3\OneDrive - Bajaj Finance Limited\Desktop\SpringProjects\E-commerce\target\classes started by omkarsutar3 in C:\Users\omkarsutar3\OneDrive - Bajaj Finance Limited\Desktop\SpringProjects\E-commerce)
+2025-03-21 10:46:18 INFO  EcommorceApplication:654 - No active profile set, falling back to 1 default profile: "default"
+2025-03-21 10:46:18 INFO  DevToolsPropertyDefaultsPostProcessor:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-21 10:46:18 INFO  DevToolsPropertyDefaultsPostProcessor:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-21 10:46:19 INFO  RepositoryConfigurationDelegate:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-21 10:46:19 INFO  RepositoryConfigurationDelegate:211 - Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
+2025-03-21 10:46:20 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-21 10:46:20 INFO  Version:44 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-03-21 10:46:20 INFO  RegionFactoryInitiator:50 - HHH000026: Second-level cache disabled
+2025-03-21 10:46:20 INFO  SpringPersistenceUnitInfo:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-21 10:46:20 INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+2025-03-21 10:46:21 INFO  HikariPool:565 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4980c5df
+2025-03-21 10:46:21 INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+2025-03-21 10:46:22 INFO  JtaPlatformInitiator:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-21 10:46:22 INFO  LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-21 10:46:22 INFO  OptionalLiveReloadServer:59 - LiveReload server is running on port 35729
+2025-03-21 10:46:22 INFO  NettyWebServer:141 - Netty started on port 8080
+2025-03-21 10:46:22 INFO  EcommorceApplication:56 - Started EcommorceApplication in 4.589 seconds (process running for 5.55)
+2025-03-21 10:46:36 INFO  ProductController:58 - get all products fetched
+2025-03-21 10:54:08 INFO  LocalContainerEntityManagerFactoryBean:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-21 10:54:08 INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2025-03-21 10:54:08 INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
