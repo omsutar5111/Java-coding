@@ -1,9 +1,6 @@
 package Data_Structure_Algorithms.leetcode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Medium {
     
@@ -312,6 +309,26 @@ public class Medium {
         }
         return  new  int[]{min,max};
     }
+    //3169
+    public static  int countDays(int days, int[][] meetings) {
+        Arrays.sort(meetings, Comparator.comparingInt(a -> a[0]));
+        int occupiedDays=0;
+        int currentMeetingEndDay=0;
+        for(int []meeting:meetings){
+           if(meeting[0]>currentMeetingEndDay){
+               occupiedDays+=meeting[1]-meeting[0]+1;
+               currentMeetingEndDay=meeting[1];
+           }
+           else{
+               if(meeting[1]>currentMeetingEndDay){
+                   occupiedDays+=meeting[1]-currentMeetingEndDay;
+                   currentMeetingEndDay=meeting[1];
+               }
+           }
+        }
+        return days-occupiedDays;
+
+    }
 
     public static void main(String[] args) {
        int []Arr={4,5,6,7,0,1,2};
@@ -319,17 +336,20 @@ public class Medium {
        int piles[]={805306368,805306368,805306368};
        int h=1000000000;
 //        System.out.println(minEatingSpeed(piles,h));
-        String[]strs ={"eat","tea","tan","ate","nat","bat"};
+//        String[]strs ={"eat","tea","tan","ate","nat","bat"};
         int nums[]={6,-1,9};
 //        System.out.println(waysToSplitArray(nums));
-        System.out.println(collectAnagrams(strs));
+//        System.out.println(collectAnagrams(strs));
 
 //        System.out.println(searchBinary(Arr,0));
 //        System.out.println(canMakeSubsequence("f","f"));
-//        System.out.println(addSpaces( "EnjoyYourCoffee",spaces));
-       int getClosestPrime[]=getClosestPrimes(18 ,25);
-       for (int num:getClosestPrime){
-           System.out.println(num);
-       }
+////        System.out.println(addSpaces( "EnjoyYourCoffee",spaces));
+//       int getClosestPrime[]=getClosestPrimes(18 ,25);
+//       for (int num:getClosestPrime){
+//           System.out.println(num);
+//       }
+
+        int [][]meetings={{5,7},{1,3},{9,10}};
+        System.out.println(countDays(10,meetings));
     }
 }
