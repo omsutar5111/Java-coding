@@ -1,11 +1,18 @@
 package Data_Structure_Algorithms.Maps_Sets;
 
+import javax.imageio.metadata.IIOMetadataNode;
 import java.util.HashMap;
+import java.util.Map;
 
 public class hashing_2 {
 
     public static int PairSum(int[] A, int B) {
         HashMap<Integer, Integer> map = new HashMap<>();
+        for(Map.Entry<Integer, Integer> entry:map.entrySet()){
+            int key=entry.getKey();
+            int value=entry.getValue();
+            System.out.println("key+ "+key+"value+ "+value);
+        }
         int count = 0;
         // int freq=0;
         int mod = 1000000007;
@@ -31,6 +38,11 @@ public class hashing_2 {
                 map.put(A[i], (map.get(K) - 1));
 
             }
+        }
+        for(Map.Entry<Integer, Integer> entry:map.entrySet()){
+            int key=entry.getKey();
+            int value=entry.getValue();
+            System.out.println("key+ "+key+"value+ "+value);
         }
         return count;
     }
